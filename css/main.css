@@ -8,51 +8,57 @@
 		-webkit-backface-visibility
 */
 
-.front {
-	
-	/*width: 200px;
-	height: 200px;*/
-	position: relative;
-	transform: preserve-3d;
+
 	
 
-}
 
-.back {
-
-	position: absolute;
-	top: 111px;
-
-	opacity: 0;
-	transform-style: preserve-3d;
-
-	/*transition: opacity 1s ease-in-out;*/
-	
-	
-
-}
 
 .back:hover{
-	opacity: 1;
+	opacity: ;
 	
 	
 
 }
 
 .front:hover{
-	opacity: 0;
+	opacity: ;
 	
 	
 }
 
-.portfolio-item{
-	perspective: 200px;
+.portfolio{
+	perspective: 1000;
 }
 
-.portfolio-item:hover{
+.portfolio-item:hover {
 	postion: relative;
 	
-	-webkit-transform: rotate3d(0,180.0);
+	-webkit-transform: rotateY(180deg);
 
 }
 
+.portfolio-item {
+	transition: .7s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.front {
+	-webkit-backface-visibility: hidden;
+	position: relative;
+	top: 0;
+	left: 0;
+	-webkit-transform: preserve-3d;
+}
+
+
+
+.back {
+
+	position: relative;
+	top: -200px;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: rotateY(180deg);
+	-webkit-backface-visibility: hidden;
+}
